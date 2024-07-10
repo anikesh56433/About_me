@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anikesh Sharma</title>
   <style>
     body {
@@ -15,16 +17,18 @@
       margin: 0;
     }
 
-   .container {
+    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      width: 100%;
       max-width: 400px;
       padding: 20px;
       border-radius: 10px;
       background-color: #222;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.5s ease-in-out;
     }
 
     img {
@@ -55,6 +59,7 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       margin-bottom: 10px;
+      animation: pulse 2s infinite;
     }
 
     button:hover {
@@ -63,42 +68,6 @@
 
     button:active {
       background-color: #555;
-    }
-
-   .social-links {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-   .social-link {
-      margin: 0 10px;
-    }
-
-   .social-link a {
-      display: inline-block;
-      padding: 10px;
-      border-radius: 50%;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-   .social-link a:hover {
-      background-color: #444;
-    }
-
-   .container {
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    button {
-      animation: pulse 2s infinite;
-    }
-
-   .social-link a {
-      animation: spin 2s infinite;
     }
 
     @keyframes fadeIn {
@@ -122,126 +91,78 @@
       }
     }
 
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Make the page responsive */
     @media (max-width: 768px) {
-     .container {
-        max-width: 300px;
+      .container {
+        max-width: 90%;
+      }
+
+      button {
+        padding: 12px;
+        font-size: 1em;
       }
     }
 
     @media (max-width: 480px) {
-     .container {
-        max-width: 200px;
+      .container {
+        max-width: 90%;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 0.9em;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1em;
+        margin-bottom: 20px;
       }
     }
-
-    /* Footer styles */
-   .footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-   .footer-links {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-   .footer-link {
-      margin: 0 10px;
-    }
-
-   .footer-link a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-   .footer-link a:hover {
-      color: #ccc;
-    }
-
-   .footer-photos {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-   .footer-photo {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin: 0 10px;
-    }
   </style>
+</head>
+<body>
+  <div class="container">
+    <img src="anikeshSS.jpg" alt="Anikesh Sharma">
+    <h1>Anikesh Sharma</h1>
+    <p>Software Developer and Mentor</p>
+    <button id="topmate-btn">Connect on Topmate</button>
+    <button id="what_btn">WhatsApp Community</button>
+    <button id="gfg-btn">Geeks For Geeks</button>
+    <button id="lcbtnw">Leet Code</button>
+    <button id="gitbtn">Git Hub</button>
+    <button id="linkedin-btn">Linkedin</button>
+    <button id="instagram-btn">Instagram</button>
+    <button id="email-btn">Email</button>
+  </div>
 
-    </head>
-    <body>
-      <div class="container">
-        <img src="anikeshSS.jpg" alt="Mahima Hans">
-        <h1>ANIKESH SHARMA</A></h1>
-        <p>Software Developer and Mentor</p>
-        <button id="topmate-btn">Connect on Topmate</button>
-        <button id="what_btn">WhatsApp Community</button>
-        <button id="gfg-btn">Geeks For Geeks</button>
-        <button id="lcbtnw">Leet Code</button>
-        <button id="gitbtn">Git Hub</button>
-        <button id="linkedin-btn">Linkedin</button>
-        <button id="instagram-btn">Instagram</button>
-        <button id="email-btn">Email</button>
-        
-    
-      <script>
-       
-        const topmateBtn = document.getElementById('topmate-btn');
-        const mentorshipBtn = document.getElementById('gfg-btn');
-        const whatBtn = document.getElementById('what_btn');
-        const lcbtn = document.getElementById('lcbtnw');
-        const githubbtn = document.getElementById('gitbtn');
-        const linkedinBtn = document.getElementById('linkedin-btn');
-        const instagramBtn = document.getElementById('instagram-btn');
-        const emailBtn = document.getElementById('email-btn');
-    
-        topmateBtn.addEventListener('click', () => {
-          window.open('https://topmate.io/anikesh_sharma/?utm_source=linkedin&utm_medium=product&utm_campaign=ss', '_blank');
-        });
+  <script>
+    const links = {
+      topmate: 'https://topmate.io/anikesh_sharma/?utm_source=linkedin&utm_medium=product&utm_campaign=ss',
+      whatsapp: 'https://whatsapp.com/channel/0029VaYvyhJ2v1IqEsquIL19',
+      gfg: 'https://www.geeksforgeeks.org/user/anikeshvfbq/',
+      leetcode: 'https://leetcode.com/u/anikesh066/',
+      github: 'https://github.com/anikesh56433',
+      linkedin: 'https://www.linkedin.com/in/anikesh-sharma56434/',
+      instagram: 'https://www.instagram.com/i__am__ani__/',
+      email: 'mailto:anikesh56433@gmail.com'
+    };
 
-        whatBtn.addEventListener('click', () => {
-          window.open(' https://whatsapp.com/channel/0029VaYvyhJ2v1IqEsquIL19 ', '_blank');
-        });
-    
-        mentorshipBtn.addEventListener('click', () => {
-          window.open('https://www.geeksforgeeks.org/user/anikeshvfbq/', '_blank');
-        });
-    
-        lcbtn.addEventListener('click', () => {
-          window.open('https://leetcode.com/u/anikesh066/', '_blank');
-        });
-        githubbtn.addEventListener('click', () => {
-          window.open('https://github.com/anikesh56433', '_blank');
-        });
-        linkedinBtn.addEventListener('click', () => {
-          window.open('https://www.linkedin.com/in/anikesh-sharma56434/', '_blank');
-        });
-    
-        instagramBtn.addEventListener('click', () => {
-          window.open('https://www.instagram.com/i__am__ani__/', '_blank');
-        });
-    
-        emailBtn.addEventListener('click', () => {
-          window.open('mailto:anikesh56433@gmail.com', '_blank');
-        });
-      </script>
-    </body>
-    </html>
+    document.getElementById('topmate-btn').addEventListener('click', () => window.open(links.topmate, '_blank'));
+    document.getElementById('what_btn').addEventListener('click', () => window.open(links.whatsapp, '_blank'));
+    document.getElementById('gfg-btn').addEventListener('click', () => window.open(links.gfg, '_blank'));
+    document.getElementById('lcbtnw').addEventListener('click', () => window.open(links.leetcode, '_blank'));
+    document.getElementById('gitbtn').addEventListener('click', () => window.open(links.github, '_blank'));
+    document.getElementById('linkedin-btn').addEventListener('click', () => window.open(links.linkedin, '_blank'));
+    document.getElementById('instagram-btn').addEventListener('click', () => window.open(links.instagram, '_blank'));
+    document.getElementById('email-btn').addEventListener('click', () => window.open(links.email, '_blank'));
+  </script>
+</body>
+</html>
